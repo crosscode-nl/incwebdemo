@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     build: .
-    image: crosscodenl/incwebdemo:lastest
+    image: crosscodenl/incwebdemo:latest
     ports:
       - "5000:5000"
     env_file:

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: incwebdemo-deployment
+  labels:
+    app: incwebdemo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: incwebdemo
+  template:
+    metadata:
+      labels:
+        app: incwebdemo
+    spec:
+      containers:
+        - name: incwebdemo
+          image: crosscodenl/incwebdemo:1.0
+          ports:
+            - containerPort: 5000
